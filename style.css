@@ -21,9 +21,9 @@ header {
   display: flex;
   padding: 10px 12px;
   align-items: center;
-  color: #6070FF;
+  color: #6070ff;
   text-align: center;
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -50,10 +50,8 @@ header {
 }
 
 .greeting {
-    color:#172B4D;
-
-/* Header / 2 */
-  font-family: Poppins;
+  color:#172b4d;
+  font-family: 'Poppins';
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -62,9 +60,7 @@ header {
 
 .job-description {
   color: #344563;
-
-/* Body / 2 */
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -72,8 +68,8 @@ header {
 }
 
 .connect-link {
-  color: #7F8CFF;
-  font-family: Poppins;
+  color: #7f8cff;
+  font-family: 'Poppins';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
