@@ -79,3 +79,76 @@ header {
   width: 170.167px;
   height: 20px;
 }
+
+.work-section {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 88px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 114px;
+  padding-bottom: 114px;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  gap: 12px;
+}
+
+.snapshoot-portfolio {
+  border-radius: 8px;
+  width: 295px;
+  height: 220px;
+}
+
+.title {
+  color: #172b4d;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--neutrals-n-600, #344563);
+  line-height: 16px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.about-job {
+  color: #344563;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.subject-pictures {
+  display: flex;
+  gap: 8px;
+}
+
+.subjects {
+  display: flex;
+  padding: 4px 12px;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--primary-b-50, #EBEBFF);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  color: #6070FF;
+  text-decoration: none;
+}
