@@ -85,7 +85,7 @@
   margin-bottom: 12px;
 }
 
-.see-project {
+.see-project, .get-my-resume {
   background-color: #fff;
   border: 1px solid #6070ff;
   border-radius: 8px;
@@ -95,4 +95,95 @@
   font-style: normal;
   color: #396df2;
 }
+
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 114px 24px;
+  gap: 24px;
+}
+
+.about-me-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.connect-link {
+  color: #7f8cff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 170.167px;
+  height: 20px;
+  margin: 8px;
+}
+
+.languages, .frameworks, .skills {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 26px 16px 12px;
+  align-items: center;
+  gap: 12px;
+}
+
+.languages p, .frameworks p, .skills p {
+  width: 237px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.language-list {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.js-section, .html-section, .css-section {
+  display: flex;
+width: 303px;
+padding: 9px 12px 9.716px 12px;
+justify-content: flex-start;
+align-items: center;
+gap: 16px;
+border-radius: 8px;
+background: var(--neutrals-n-10, #F7F7F9); 
+}
+
+.js-icon, .html-icon, .css-icon {
+  width: 48px;
+height: 48px;
+flex-shrink: 0;
+border-radius: 48px;
+border: 1px solid var(--neutrals-n-0, #FFF); 
+}
+
+.frameworks, .skills {
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.js-section p, .html-section p, .css-section p {
+  font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+color: #253858;
+}
+
+
 
