@@ -101,6 +101,22 @@ header {
   gap: 12px;
 }
 
+.button {
+  color: #396df2;
+  text-align: center; 
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 141.176% */
+  letter-spacing: 0.51px; 
+  display: flex;
+padding: 12px;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+border: 1px solid var(--primary-b-400, #6070FF);
+}
+
 .snapshoot-portfolio {
   border-radius: 8px;
   width: 295px;
@@ -152,3 +168,4 @@ header {
   color: #6070FF;
   text-decoration: none;
 }
+
