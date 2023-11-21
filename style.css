@@ -156,21 +156,21 @@ header {
   padding: 4px 12px;
   align-items: center;
   border-radius: 8px;
-  background: var(--primary-b-50, #EBEBFF);
+  background: #ebebff;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  color: #6070FF;
+  color: #6070ff;
   text-decoration: none;
 }
 
-.subject-pictures {
+/* .subject-pictures {
   display: flex;
   gap: 8px;
-}
+} */
 
-.subjects {
+/* .subjects {
   display: flex;
   padding: 4px 12px;
   align-items: center;
@@ -182,7 +182,7 @@ header {
   line-height: 16px;
   color: #6070FF;
   text-decoration: none;
-}
+} */
 
 .see-project-button {
   margin-top: 12px;
@@ -247,7 +247,7 @@ header {
 }
 
 .js-section,
-.html-section, 
+.html-section,
 .css-section {
   display: flex;
   width: 303px;
@@ -256,7 +256,7 @@ header {
   align-items: center;
   gap: 16px;
   border-radius: 8px;
-  background: #f7f7f9; 
+  background: #f7f7f9;
 }
 
 .js-icon,
@@ -266,7 +266,7 @@ header {
   height: 48px;
   flex-shrink: 0;
   border-radius: 48px;
-  border: 1px solid #fff; 
+  border: 1px solid #fff;
 }
 
 .frameworks,
