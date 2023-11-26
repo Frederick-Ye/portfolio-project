@@ -118,6 +118,13 @@
     line-height: 24px;
     font-style: normal;
     color: #396df2;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+  .button:hover {
+    background-color: #396df2;
+    color: #fff;
   }
 
   .snapshoot-portfolio {
@@ -381,6 +388,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: 1.25rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  .logo:hover {
+    transform: rotate(180deg);
   }
 
   .Hamburger-menu {
@@ -388,12 +401,14 @@
   }
 
   .nav-links-container {
+    display: flex;
     width: 16.125rem;
     height: 2.5rem;
     padding-top: 8px;
   }
 
   .nav-links {
+    display: block;
     color: #344563;
     text-decoration: none;
     font-size: 0.9375rem;
@@ -401,6 +416,11 @@
     font-weight: 500;
     line-height: 1.25rem;
     padding: 0.625rem 0.75rem;
+    transition: all 0.5s ease;
+  }
+
+  .nav-links:hover {
+    transform: scale(1.1);
   }
 
   .hero {
@@ -489,12 +509,25 @@
     line-height: 24px;
     font-style: normal;
     color: #396df2;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+  .button:hover {
+    background-color: #396df2;
+    color: #fff;
   }
 
   .snapshoot-portfolio {
     border-radius: 1.5rem;
     width: 34rem;
     height: 28rem;
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+
+  .snapshoot-portfolio:hover {
+    transform: scale(1.03);
   }
 
   .title {
