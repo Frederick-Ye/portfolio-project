@@ -139,7 +139,7 @@
 
 .snapshoot-portfolio {
   border-radius: 8px;
-  width: 18.438rem;
+  /* width: 18.438rem; */
   height: 13.75rem;
   object-fit: cover;
   transition: all 0.6s ease;
