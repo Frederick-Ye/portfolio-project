@@ -255,7 +255,7 @@ body {
 .frameworks p,
 .skills p {
   width: 14.813rem;
-  font-size: 1.25;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5rem;
@@ -433,7 +433,7 @@ form button {
 .menu-lists {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .menu-lists a {
@@ -513,7 +513,7 @@ form button {
   }
 
   .work-section {
-    grid: 8.8rem;
+    gap: 8.8rem;
   }
 
   .snapshoot-portfolio {

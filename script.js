@@ -21,24 +21,3 @@ function closeFun(){
   mobileMenu.classList.add("hidden")
   document.body.style.overflow = "auto"
 }
-
-function scrollToSection(portfolioSection){
-  var section = document.getElementById(portfolioSection);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth"})
-  }
-}
-
-function scrollToSection(aboutSection){
-  var section = document.getElementById(aboutSection);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth"})
-  }
-}
-
-function scrollToSection(contactSection){
-  var section = document.getElementById(contactSection);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth"})
-  }
-}
