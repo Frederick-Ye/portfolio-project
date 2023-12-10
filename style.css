@@ -482,6 +482,16 @@ form button {
   z-index: 400;
 }
 
+.popupImage1 img,
+.popupImage2 img,
+.popupImage3 img,
+.popupImage4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .popupTop {
   display: flex;
   justify-content: space-between;
@@ -653,6 +663,10 @@ form button {
     overflow: auto;
   }
 
+  .popupWindowContainer {
+    padding: 1.5rem;
+  }
+
   .popupImage1,
   .popupImage2,
   .popupImage3,
@@ -670,5 +684,36 @@ form button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .popupfooter {
+    display: flex;
+    margin-top: 1.5rem;
+
+  }
+
+  .popupfooter p {
+    width: 90%;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+
+  }
+
+  .right-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .divider {
+    display: flex;
+    width: 19.125rem;
+    height: 1.0625rem;
+    padding: 0rem 0.25rem;
+    justify-content: center;
+    align-items: center;
   }
 }
