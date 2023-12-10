@@ -638,4 +638,37 @@ form button {
   .form-section {
     background-color: #fff;
   }
+
+  .popupWindow1,
+  .popupWindow2,
+  .popupWindow3,
+  .popupWindow4 {
+    background: hsla(212, 16%, 48%, 0.9);
+    width: 100vw;
+    height: 100vh;
+    padding: 4.81rem 8.87rem;
+    position: fixed;
+    top: 0;
+    z-index: 300;
+    overflow: auto;
+  }
+
+  .popupImage1,
+  .popupImage2,
+  .popupImage3,
+  .popupImage4 {
+    position: relative;
+    width: 100%;
+    height: 36.625rem;
+    border-radius: 8px;
+  }
+
+  .popupImage1 img,
+  .popupImage2 img,
+  .popupImage3 img,
+  .popupImage4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
