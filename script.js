@@ -34,7 +34,7 @@ window.addEventListener('scroll', () => {
     }
   });
 
-  navLinks.forEach(a => {
+  navLinks.forEach((a) => {
     a.classList.remove('active');
     if (a.classList.contains(current)) {
       a.classList.add('active');
