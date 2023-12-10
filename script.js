@@ -20,3 +20,24 @@ closeBtn.addEventListener('click', closeFun);
 portfolioBtn.addEventListener('click', closeFun);
 aboutBtn.addEventListener('click', closeFun);
 contactBtn.addEventListener('click', closeFun);
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links-container a');
+
+window.addEventListener('scroll', ()=> {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const yOffset = window.scrollY + 50;
+    if(yOffset >= sectionTop){
+      current = section.getAttribute('id');
+    }
+  })
+
+  navLinks.forEach (a => {
+    a.classList.remove('active');
+    if(a.classList.contains(current)){
+      a.classList.add('active')
+    }
+  })
+})
