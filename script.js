@@ -112,3 +112,16 @@ function closePopup4() {
 
 popupBtn4.addEventListener('click', openPopup4);
 closePopupBtn4.addEventListener('click', closePopup4);
+
+function validateForm() {
+  var emailInput = document.getElementById('email');
+  var emailValue = emailInput.value.trim().toLowerCase();
+  
+  if (emailValue === emailInput.value.trim()) {
+    return true;
+  } else {
+    var errorElement = document.getElementById('error-message');
+    errorElement.textContent = 'Please enter a lowercase email address!!!';
+    return false;
+  }
+}

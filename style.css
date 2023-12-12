@@ -403,6 +403,12 @@ form button {
   margin-top: 10px;
 }
 
+#error-message {
+  color: red;
+  font-size: large;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+}
 /* mobile-menu */
 
 .mobile-menu {
