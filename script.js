@@ -125,3 +125,27 @@ function validateForm() {
     return false;
   }
 }
+
+function saveToLocalStorage(data) {
+  localStorage.setItem('formData', JSON.stringify(data));
+}
+
+function loadFromLocalStorage() {
+  const savedData= localStorage.getItem('formData');
+  return savedData ? JSON.parse(savedData) : {};
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const formData = loadFromLocalStorage();
+
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', (event) => {
+      formData[input.name] = input.value;
+      saveToLocalStorage(formData);
+    });
+
+    if (formData[input.name]) {
+      input.value = formData[input.name];
+    }
+  });
+});
