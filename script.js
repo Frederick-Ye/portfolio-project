@@ -125,9 +125,7 @@ function validateForm() {
   }
 }
 
-document.querySelector('.submit-button').addEventListener('click', () => {
-  document.querySelector('form').setAttribute("onsubmit", "return validateForm()");
-})
+console.log('validateForm');
 
 function saveToLocalStorage(data) {
   localStorage.setItem('formData', JSON.stringify(data));
