@@ -125,7 +125,11 @@ function validateForm() {
   }
 }
 
-console.log('validateForm');
+document.querySelector('form').addEventListener('submit', function (event) {
+  if (!validateForm()) {
+      event.preventDefault();
+  }
+});
 
 function saveToLocalStorage(data) {
   localStorage.setItem('formData', JSON.stringify(data));
