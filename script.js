@@ -59,7 +59,7 @@ function closePopup1() {
 popupBtn1.addEventListener('click', openPopup1);
 closePopupBtn1.addEventListener('click', closePopup1);
 
-//popup window 2
+// pop.up window 2
 const popUp2 = document.querySelector('.popupWindow2');
 const popupBtn2 = document.querySelector('#seeproject2');
 const closePopupBtn2 = document.querySelector('.a2');
@@ -77,7 +77,7 @@ function closePopup2() {
 popupBtn2.addEventListener('click', openPopup2);
 closePopupBtn2.addEventListener('click', closePopup2);
 
-//popup window 3
+// popup window 3
 const popUp3 = document.querySelector('.popupWindow3');
 const popupBtn3 = document.querySelector('#seeproject3');
 const closePopupBtn3 = document.querySelector('.a3');
@@ -95,7 +95,7 @@ function closePopup3() {
 popupBtn3.addEventListener('click', openPopup3);
 closePopupBtn3.addEventListener('click', closePopup3);
 
-//popup window 4
+// popup window 4
 const popUp4 = document.querySelector('.popupWindow4');
 const popupBtn4 = document.querySelector('#seeproject4');
 const closePopupBtn4 = document.querySelector('.a4');
@@ -114,31 +114,30 @@ popupBtn4.addEventListener('click', openPopup4);
 closePopupBtn4.addEventListener('click', closePopup4);
 
 function validateForm() {
-  var emailInput = document.getElementById('email');
-  var emailValue = emailInput.value.trim().toLowerCase();
-  
+  let emailInput = document.getElementById('email');
+  let emailValue = emailInput.value.trim().toLowerCase();
   if (emailValue === emailInput.value.trim()) {
     return true;
   } else {
-    var errorElement = document.getElementById('error-message');
+    let errorElement = document.getElementById('error-message');
     errorElement.textContent = 'Please enter a lowercase email address!!!';
     return false;
   }
-}
+};
 
 function saveToLocalStorage(data) {
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
 function loadFromLocalStorage() {
-  const savedData= localStorage.getItem('formData');
+  const savedData = localStorage.getItem('formData');
   return savedData ? JSON.parse(savedData) : {};
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const formData = loadFromLocalStorage();
 
-  document.querySelectorAll('input').forEach(input => {
+  document.querySelectorAll('input').forEach((input) => {
     input.addEventListener('input', (event) => {
       formData[input.name] = input.value;
       saveToLocalStorage(formData);
