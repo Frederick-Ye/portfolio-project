@@ -125,9 +125,9 @@ function validateForm() {
   }
 }
 
-document.querySelector('form').addEventListener('submit', function (event) {
+document.querySelector('form').addEventListener('submit', (event) => {
   if (!validateForm()) {
-      event.preventDefault();
+    event.preventDefault();
   }
 });
 
