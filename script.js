@@ -114,16 +114,20 @@ popupBtn4.addEventListener('click', openPopup4);
 closePopupBtn4.addEventListener('click', closePopup4);
 
 function validateForm() {
-  let emailInput = document.getElementById('email');
-  let emailValue = emailInput.value.trim().toLowerCase();
+  const emailInput = document.getElementById('email');
+  const emailValue = emailInput.value.trim().toLowerCase();
   if (emailValue === emailInput.value.trim()) {
     return true;
-  } else {
-    let errorElement = document.getElementById('error-message');
+  } {
+    const errorElement = document.getElementById('error-message');
     errorElement.textContent = 'Please enter a lowercase email address!!!';
     return false;
   }
-};
+}
+
+document.querySelector('.submit-button').addEventListener('click', () => {
+  document.querySelector('form').setAttribute("onsubmit", "return validateForm()");
+})
 
 function saveToLocalStorage(data) {
   localStorage.setItem('formData', JSON.stringify(data));
@@ -138,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const formData = loadFromLocalStorage();
 
   document.querySelectorAll('input').forEach((input) => {
-    input.addEventListener('input', (event) => {
+    input.addEventListener('input', () => {
       formData[input.name] = input.value;
       saveToLocalStorage(formData);
     });
