@@ -85,7 +85,7 @@
                     <a href="#" onclick="return false;" class="subjects">JavaScript</a>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="button">
+                    <button id="seeproject" type="button" class="button">
                         See project
                     </button>
                 </div>
@@ -117,7 +117,7 @@
                     <a href="#" onclick="return false;" class="subjects">JavaScript</a>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="button">
+                    <button id="seeproject" type="button" class="button">
                         See project
                     </button>
                 </div>
@@ -150,7 +150,7 @@
                     <a href="#" onclick="return false;" class="subjects">JavaScript</a>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="button">
+                    <button id="seeproject" type="button" class="button">
                         See project
                     </button>
                 </div>
@@ -182,7 +182,7 @@
                     <a href="#" onclick="return false;" class="subjects">JavaScript</a>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="button">
+                    <button id="seeproject" type="button" class="button">
                         See project
                     </button>
                 </div>
@@ -283,19 +283,25 @@
             <textarea name="message" id="message" placeholder="Write your message here..." maxlength="500"
                 required></textarea>
 
-            <button type="submit" class="button">Get in touch</button>
+            <button type="submit" class="submit-button">Get in touch</button>
+            <div id="error-message"></div>
         </form>
     </section>
+    <!-- mobile menu -->
     <div class="mobile-menu hidden">
         <div class="x-btn">
             <a id="closeMenuBtn" href="#" onclick="return false;"><img src="./icons/Enabled.png" alt=""></a>
         </div>
-        
+
         <div class="menu-lists">
             <a id="menu1" href="#portfolioSection">Portfolio</a>
             <a id="menu2" href="#aboutSection">About</a>
             <a id="menu3" href="#contactSection">Contact</a>
         </div>
+    </div>
+    <!-- popup window -->
+    <div class="popupWindow hidden">
+        
     </div>
     <script src="./script.js"></script>
 </body>
