@@ -41,33 +41,33 @@ window.addEventListener('scroll', () => {
   });
 });
 
-const popUp = document.querySelector(".popupWindow")
+const popUp = document.querySelector('.popupWindow');
 
 const projects = [
-    {
-        title: "Tonic",
-        name: "CANOPY",
-        image: "./snapshoots/work portfolio.png",
-    },
-    {
-        title: "Multi-Post Stories",
-        name: "FACEBOOK",
-        image: "./snapshoots/work portfolio 2.png",
-    },
-    {
-        title: "Facebook 360",
-        name: "FACEBOOK",
-        image: "./snapshoots/work portfolio 3.png",
-    },
-    {
-        title: "Uber Navigation",
-        name: "Uber",
-        image: "./snapshoots/work portfolio 4.png",
-    },
-]
+  {
+    title: 'Tonic',
+    name: 'CANOPY',
+    image: './snapshoots/work portfolio.png',
+  },
+  {
+    title: 'Multi-Post Stories',
+    name: 'FACEBOOK',
+    image: './snapshoots/work portfolio 2.png',
+  },
+  {
+    title: 'Facebook 360',
+    name: 'FACEBOOK',
+    image: './snapshoots/work portfolio 3.png',
+  },
+  {
+    title: 'Uber Navigation',
+    name: 'Uber',
+    image: './snapshoots/work portfolio 4.png',
+  },
+];
 
 function getProjectHTML(project) {
-    const html = `<div class="popupWindowContainer">
+  const html = `<div class="popupWindowContainer">
                 <div class="popupTop">
                     <h1 class="title">${project.title}</h1>
                     <a class="a" id="closeMenuBtn1" href="#" onclick="return false;"><img src="./images/Icon - Cancel.svg"
@@ -118,30 +118,29 @@ function getProjectHTML(project) {
                         </div>
                     </div>
                 </div>
-          </div>`
+          </div>`;
 
-    return html
+  return html;
 }
 
 function openPopup(project) {
-    popUp.classList.remove("hidden")
-    document.body.style.overflow = "hidden"
-
-    popUp.innerHTML = getProjectHTML(project)
-    const closePopupBtn = document.querySelector(".a")
-    closePopupBtn.addEventListener("click", closePopup)
-}
+  popUp.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  popUp.innerHTML = getProjectHTML(project);
+  const closePopupBtn = document.querySelector('.a');
+  closePopupBtn.addEventListener('click', closePopup);
+};
 
 function closePopup() {
-    popUp.classList.add("hidden")
-    document.body.style.overflow = "auto"
-}
+  popUp.classList.add('hidden');
+  document.body.style.overflow = 'auto';
+};
 
-const popUpBtns = document.querySelectorAll("#seeproject")
+const popUpBtns = document.querySelectorAll('#seeproject');
 
 popUpBtns.forEach((popupBtn, index) => {
-    popupBtn.addEventListener("click", () => openPopup(projects[index]))
-})
+  popupBtn.addEventListener('click', () => openPopup(projects[index]))
+});
 // form
 function validateForm() {
   const emailInput = document.getElementById('email');
@@ -194,4 +193,4 @@ textarea.addEventListener('input', () => {
 
 if (formData[textarea.name]) {
   textarea.value = formData[textarea.name];
-};
+}
