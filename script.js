@@ -123,23 +123,23 @@ function getProjectHTML(project) {
   return html;
 }
 
+function closePopup() {
+  popUp.classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+
 function openPopup(project) {
   popUp.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
   popUp.innerHTML = getProjectHTML(project);
   const closePopupBtn = document.querySelector('.a');
   closePopupBtn.addEventListener('click', closePopup);
-};
-
-function closePopup() {
-  popUp.classList.add('hidden');
-  document.body.style.overflow = 'auto';
-};
+}
 
 const popUpBtns = document.querySelectorAll('#seeproject');
 
 popUpBtns.forEach((popupBtn, index) => {
-  popupBtn.addEventListener('click', () => openPopup(projects[index]))
+  popupBtn.addEventListener('click', () => openPopup(projects[index]));
 });
 // form
 function validateForm() {
