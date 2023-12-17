@@ -41,78 +41,108 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// popup window 1
-const popUp1 = document.querySelector('.popupWindow1');
-const popupBtn1 = document.querySelector('#seeproject1');
-const closePopupBtn1 = document.querySelector('.a1');
+const popUp = document.querySelector(".popupWindow")
 
-function openPopup1() {
-  popUp1.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
+const projects = [
+    {
+        title: "Tonic",
+        name: "CANOPY",
+        image: "./snapshoots/work portfolio.png",
+    },
+    {
+        title: "Multi-Post Stories",
+        name: "FACEBOOK",
+        image: "./snapshoots/work portfolio 2.png",
+    },
+    {
+        title: "Facebook 360",
+        name: "FACEBOOK",
+        image: "./snapshoots/work portfolio 3.png",
+    },
+    {
+        title: "Uber Navigation",
+        name: "Uber",
+        image: "./snapshoots/work portfolio 4.png",
+    },
+]
+
+function getProjectHTML(project) {
+    const html = `<div class="popupWindowContainer">
+                <div class="popupTop">
+                    <h1 class="title">${project.title}</h1>
+                    <a class="a" id="closeMenuBtn1" href="#" onclick="return false;"><img src="./images/Icon - Cancel.svg"
+                            alt=""></a>
+                </div>
+
+                <div class="details">
+                    <p class="name">${project.name}</p>
+                    <img src="./snapshoots/Counter.svg" alt="counter icon">
+                    <p class="position">Back End Dev</p>
+                    <img src="./snapshoots/Counter.svg" alt="counter icon">
+                    <p class="year">2015</p>
+                </div>
+
+                <div class="popupImage1">
+                    <img src="${project.image}" alt="">
+                </div>
+
+                <div class="popupfooter">
+                    <div class="about-job">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.
+
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy
+                            text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and
+                            scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.
+                        </p>
+                    </div>
+                    <div class="right-box">
+                        <div class="subject-pictures">
+                            <a href="#" onclick="return false;" class="subjects">HTML</a>
+                            <a href="#" onclick="return false;" class="subjects">CSS</a>
+                            <a href="#" onclick="return false;" class="subjects">JavaScript</a>
+                        </div>
+                        <div class="divider">
+                            <img src="./images/Vector 4.png" alt="">
+                        </div>
+                        <div class="buttons">
+                            <button type="button" class="button liveBtn">
+                                See live <img src="./icons/Icon - Export.svg" alt="">
+                            </button>
+                            <button type="button" class="button sourceBtn">
+                                See source <img src="./icons/Frame.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+          </div>`
+
+    return html
 }
 
-function closePopup1() {
-  popUp1.classList.add('hidden');
-  document.body.style.overflow = 'auto';
+function openPopup(project) {
+    popUp.classList.remove("hidden")
+    document.body.style.overflow = "hidden"
+
+    popUp.innerHTML = getProjectHTML(project)
+    const closePopupBtn = document.querySelector(".a")
+    closePopupBtn.addEventListener("click", closePopup)
 }
 
-popupBtn1.addEventListener('click', openPopup1);
-closePopupBtn1.addEventListener('click', closePopup1);
-
-// pop.up window 2
-const popUp2 = document.querySelector('.popupWindow2');
-const popupBtn2 = document.querySelector('#seeproject2');
-const closePopupBtn2 = document.querySelector('.a2');
-
-function openPopup2() {
-  popUp2.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
+function closePopup() {
+    popUp.classList.add("hidden")
+    document.body.style.overflow = "auto"
 }
 
-function closePopup2() {
-  popUp2.classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
+const popUpBtns = document.querySelectorAll("#seeproject")
 
-popupBtn2.addEventListener('click', openPopup2);
-closePopupBtn2.addEventListener('click', closePopup2);
-
-// popup window 3
-const popUp3 = document.querySelector('.popupWindow3');
-const popupBtn3 = document.querySelector('#seeproject3');
-const closePopupBtn3 = document.querySelector('.a3');
-
-function openPopup3() {
-  popUp3.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closePopup3() {
-  popUp3.classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
-
-popupBtn3.addEventListener('click', openPopup3);
-closePopupBtn3.addEventListener('click', closePopup3);
-
-// popup window 4
-const popUp4 = document.querySelector('.popupWindow4');
-const popupBtn4 = document.querySelector('#seeproject4');
-const closePopupBtn4 = document.querySelector('.a4');
-
-function openPopup4() {
-  popUp4.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closePopup4() {
-  popUp4.classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
-
-popupBtn4.addEventListener('click', openPopup4);
-closePopupBtn4.addEventListener('click', closePopup4);
-
+popUpBtns.forEach((popupBtn, index) => {
+    popupBtn.addEventListener("click", () => openPopup(projects[index]))
+})
+// form
 function validateForm() {
   const emailInput = document.getElementById('email');
   const emailValue = emailInput.value.trim().toLowerCase();
@@ -154,3 +184,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+const textarea = document.querySelector('textarea');
+const formData = loadFromLocalStorage();
+textarea.addEventListener('input', () => {
+  formData[textarea.name] = textarea.value;
+  saveToLocalStorage(formData);
+});
+
+if (formData[textarea.name]) {
+  textarea.value = formData[textarea.name];
+};
