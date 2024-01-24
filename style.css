@@ -145,6 +145,7 @@ body {
 
 .button:hover {
   background-color: #396df2;
+  box-shadow: 0 8px 16px 0 rgba(64, 83, 252, 0.24);
   color: #fff;
 }
 
@@ -402,6 +403,13 @@ form button {
   margin-top: 10px;
 }
 
+#error-message {
+  color: red;
+  font-size: large;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+}
+
 /* mobile-menu */
 
 .mobile-menu {
@@ -452,6 +460,61 @@ form button {
 
 .hidden {
   display: none;
+}
+
+/* popup window */
+
+.popupWindow {
+  background: hsla(212, 16%, 48%, 0.5);
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 300;
+  overflow: auto;
+}
+
+.popupWindowContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  gap: 0.75rem;
+  z-index: 400;
+}
+
+.popupImage1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.popupTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.liveBtn {
+  display: flex;
+  padding: 0.75rem 1.375rem;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.sourceBtn {
+  display: flex;
+  padding: 0.75rem 0.875rem;
+  align-items: center;
+  gap: 0.625rem;
 }
 
 /* mobile-section finish and below are for desktop 768px */
@@ -585,5 +648,62 @@ form button {
 
   .form-section {
     background-color: #fff;
+  }
+
+  .popupWindow {
+    background: hsla(212, 16%, 48%, 0.9);
+    width: 100vw;
+    height: 100vh;
+    padding: 4.81rem 8.87rem;
+    position: fixed;
+    top: 0;
+    z-index: 300;
+    overflow: auto;
+  }
+
+  .popupWindowContainer {
+    padding: 1.5rem;
+  }
+
+  .popupImage1 {
+    position: relative;
+    width: 100%;
+    height: 36.625rem;
+    border-radius: 8px;
+  }
+
+  .popupImage1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .popupfooter {
+    display: flex;
+    margin-top: 1.5rem;
+  }
+
+  .popupfooter p {
+    width: 90%;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+  }
+
+  .right-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .divider {
+    display: flex;
+    width: 19.125rem;
+    height: 1.0625rem;
+    padding: 0 0.25rem;
+    justify-content: center;
+    align-items: center;
   }
 }
